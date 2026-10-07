@@ -18,3 +18,15 @@
 @keyframes editorial-media{from{clip-path:inset(0 12% 0 0)}to{clip-path:inset(0)}}
 @media(max-width:650px){.hero-image{height:350px}.hero-image img{object-position:50% 30%}.choice-layout{gap:35px}.motion-ready .reveal{transform:translateY(6px)}.entry-ready .hero-image{animation-duration:.5s;animation-delay:0s}}
 @media(prefers-reduced-motion:reduce){.reveal,.entry-ready .editorial-hero h1,.entry-ready .hero-image{opacity:1!important;transform:none!important;clip-path:none!important}}
+
+/* Container Scroll interpretation: iphone-place-atibaia. Existing effects retained. */
+
+.editorial-scene{perspective:1400px}.editorial-panel{position:relative;background:#f7f7f4;border:1px solid #cececa;padding:28px 20px 20px;transform-origin:left 65%;box-shadow:12px 12px 0 #ffffff0d}
+.editorial-panel:before{content:'iP / CUIDADO EM DETALHE';display:block;font-size:10px;letter-spacing:.16em;color:#171717;margin-bottom:16px}
+.editorial-panel:after{content:'';position:absolute;top:12px;left:20px;right:20px;border-top:1px solid #171717;pointer-events:none}.editorial-panel img{max-height:550px;object-fit:contain}
+@media(max-width:650px){.editorial-panel{padding:25px 12px 12px;box-shadow:6px 6px 0 #ffffff0d}.editorial-panel img{max-height:none}.editorial-panel:after{left:12px;right:12px}}
+
+.polished-cta{position:relative;isolation:isolate;overflow:hidden}.polished-cta:before{content:'';position:absolute;inset:-40% -20%;background:linear-gradient(110deg,transparent 40%,#fff2 50%,transparent 60%);transform:translateX(-110%);pointer-events:none}
+@media(hover:hover) and (pointer:fine){.polished-cta:hover:before,.polished-cta:focus-visible:before{animation:cta-light-pass .65s ease-out}}
+@keyframes cta-light-pass{to{transform:translateX(110%)}}
+@media(prefers-reduced-motion:reduce){[data-container-panel]{transform:none!important}.polished-cta:before{display:none}}
